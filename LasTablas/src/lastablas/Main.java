@@ -31,7 +31,7 @@ public class Main {
                     ejercicio4.maquinaVotar(teclado);
                     break;
                 case 5:
-                ejercicio5.imprimirPalindromo();
+                     ejercicio5.imprimirPalindromo();
                     break;
                 case 6:
                     break;
