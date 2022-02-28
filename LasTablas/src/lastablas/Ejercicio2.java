@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Ejercicio2 {
     private int[] contador = new int[10];
-    private ArrayList<Integer> listaNum = new ArrayList();
+    private ArrayList<Integer> listaNum = new ArrayList<>();
 
     public void numOcurrencias(Scanner teclado) {
         Arrays.fill(contador, 0);

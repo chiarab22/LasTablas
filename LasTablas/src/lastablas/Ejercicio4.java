@@ -21,7 +21,7 @@ public class Ejercicio4 {
                 case 4 -> votos[3]++;
                 default -> System.out.println("La opción elegida no existe. ");
             }
-
+            System.out.println("ha votado");
         }while(opcion !=68753421);
         for (int voto:votos) {
             sumaTotal+=voto;
