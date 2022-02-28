@@ -10,6 +10,7 @@ public class Main {
         Ejercicio2 ejercicio2 = new Ejercicio2();
         Ejercicio3 ejercicio3 = new Ejercicio3();
         Ejercicio4 ejercicio4 = new Ejercicio4();
+        Ejercicio5 ejercicio5 = new Ejercicio5();
 
         do {
             System.out.println("\n***************************");
@@ -30,6 +31,7 @@ public class Main {
                     ejercicio4.maquinaVotar(teclado);
                     break;
                 case 5:
+                ejercicio5.imprimirPalindromo();
                     break;
                 case 6:
                     break;
