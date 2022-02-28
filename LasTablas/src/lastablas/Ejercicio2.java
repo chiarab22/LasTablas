@@ -5,7 +5,6 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ejercicio2 {
-
     private int[] contador = new int[10];
     private ArrayList<Integer> listaNum = new ArrayList();
 

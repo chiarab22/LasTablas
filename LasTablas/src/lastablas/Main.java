@@ -7,6 +7,7 @@ public class Main {
         Scanner teclado = new Scanner(System.in);
         int option;
         Ejercicio2 ejercicio2 = new Ejercicio2();
+        Ejercicio4 ejercicio4 = new Ejercicio4();
 
         do {
             System.out.println("\n***************************");
@@ -15,35 +16,26 @@ public class Main {
             option = teclado.nextInt();
             switch (option) {
                 case 1:
-
-
                     break;
                 case 2:
                     ejercicio2.numOcurrencias(teclado);
                     break;
                 case 3:
-
                     break;
                 case 4:
-
+                    ejercicio4.maquinaVotar(teclado);
                     break;
                 case 5:
-
                     break;
                 case 6:
-
                     break;
                 case 7:
-
                     break;
                 case 8:
-
                     break;
                 case 9:
-
                     break;
                 case 10:
-
                     break;
 
 
@@ -69,5 +61,5 @@ public class Main {
 
     }
 
-    }
+}
 
