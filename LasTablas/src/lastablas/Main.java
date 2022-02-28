@@ -8,11 +8,8 @@ public class Main {
         int option;
         Ejercicio1 ejercicio1 = new Ejercicio1();
         Ejercicio2 ejercicio2 = new Ejercicio2();
-<<<<<<< HEAD
         Ejercicio3 ejercicio3 = new Ejercicio3();
-=======
         Ejercicio4 ejercicio4 = new Ejercicio4();
->>>>>>> 43ad272c89178b3fd4ee969f632c7d589c2b10d3
 
         do {
             System.out.println("\n***************************");
@@ -21,19 +18,13 @@ public class Main {
             option = teclado.nextInt();
             switch (option) {
                 case 1:
-<<<<<<< HEAD
                     ejercicio1.cuentaAtras();
-=======
->>>>>>> 43ad272c89178b3fd4ee969f632c7d589c2b10d3
                     break;
                 case 2:
                     ejercicio2.numOcurrencias(teclado);
                     break;
                 case 3:
-<<<<<<< HEAD
                     ejercicio3.notaMedia4(teclado);
-=======
->>>>>>> 43ad272c89178b3fd4ee969f632c7d589c2b10d3
                     break;
                 case 4:
                     ejercicio4.maquinaVotar(teclado);
