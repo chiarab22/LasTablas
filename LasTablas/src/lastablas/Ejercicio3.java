@@ -20,7 +20,7 @@ public class Ejercicio3 {
                      suma  +=  notas.get(i);
                 }
 
-                float media = suma/notas.size();
+                double media = suma/notas.size();
                 System.out.println("La media de las notas "+ notas + " es: " + media);
                 notas.clear();
                 break;
