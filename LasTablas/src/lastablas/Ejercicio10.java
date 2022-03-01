@@ -44,11 +44,11 @@ public class Ejercicio10 {
         this.nSeguridadSocial = nSeguridadSocial;
     }
     
-    public void infrormacion(Scanner teclado){
+    public void informacion(Scanner teclado){
         do {
             System.out.println("¿Qué quieres hacer?");
             menu();
-            opcion  =teclado.nextInt();
+            opcion = teclado.nextInt();
             switch (opcion) {
                 case 1:
                     añadirEmpleado(teclado);
