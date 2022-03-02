@@ -40,4 +40,4 @@ El diagrama de flujo correspondiente al ejercicio "Nota media (versión 4)" es:
 - Este programa simula el juego "Tres en raya". El programa comprueba las filas, las columnas y las diagonales.
 
 ### Ejercicio 10. Registro de Empleados:
-- Este programa permite, utilizando una estructura de datos de tipo: LindekHashSet, de crear una lista de emleados sin duplicados en donde se puede añadir un nuevo empleado con su nombre, número de empleado y número de seguridad social o se puede buscar a un empleado con uno de los tres parámetros(nombre,número de empleado y número de seguridad social).
+- Este programa permite, utilizando una estructura de datos de tipo: LindekHashSet, de crear una lista de emleados sin duplicados en donde se puede añadir un nuevo empleado con su nombre, número de empleado y número de seguridad social o se puede buscar a un empleado con uno de los tres parámetros (nombre,número de empleado y número de seguridad social).
