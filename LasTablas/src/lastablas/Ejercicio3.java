@@ -22,7 +22,6 @@ public class Ejercicio3 {
                 double media = suma/notas.size();
                 System.out.println("La media de las notas "+ notas + " es: " + media);
                 notas.clear();
-                break;
             }
 
         }while(nota != -1);
