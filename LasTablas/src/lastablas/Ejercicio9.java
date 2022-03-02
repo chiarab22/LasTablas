@@ -2,11 +2,11 @@ package lastablas;
 
 import java.util.Scanner;
 
-public class Ejercicio9 extends Tablero3R{
+public class Ejercicio9 extends Tablero3R {
 
     Tablero3R juego3R = generarTablero();
 
-    public void tresEnRaya(Scanner teclado){
+    public void tresEnRaya(Scanner teclado) {
         generarTablero();
 
         do {
@@ -16,6 +16,6 @@ public class Ejercicio9 extends Tablero3R{
             System.out.println("Turno del jugador O");
             juego3R.movimientoo(teclado);
             imprimirTablero(juego3R);
-        }while (!juego3R.heGanado()&&!juego3R.tableroAgotado());
+        } while (!juego3R.heGanado() && !juego3R.tableroAgotado());
     }
 }

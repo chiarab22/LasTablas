@@ -1,16 +1,11 @@
 package lastablas;
 
-import java.util.Random;
-
 public class Tablero {
     private final int SIZE = 4;
     protected char[][] tablero = new char[SIZE][SIZE];
 
-    final char desconocido = '?';
+    protected final char desconocido = '?';
     protected final char agua = '~';
-
-    Random r = new Random();
-
     private int filaGanadora;
     private int colGanadora;
 
@@ -37,10 +32,6 @@ public class Tablero {
         return colGanadora;
     }
 
-    public void setTablero(char[][] tablero) {
-        this.tablero = tablero;
-    }
-
     public void setWin(boolean win) {
         this.win = win;
 }
@@ -55,6 +46,7 @@ public class Tablero {
         }
         return new Tablero(tablero, filaGanadora, colGanadora);
     }
+
 
     public void modificarTablero(int fila, int col){
         for (int i = 0; i < SIZE; i++) {

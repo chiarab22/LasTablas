@@ -26,31 +26,35 @@ public class Tablero3R {
         return new Tablero3R(tablero);
     }
 
-    public char[][] getTablero() {
-        return tablero;
-    }
 
-    public void movimientox(Scanner teclado){
+    public void movimientox(Scanner teclado) {
         movimiento(teclado, x);
     }
 
-    public void movimientoo(Scanner teclado){
+    public void movimientoo(Scanner teclado) {
         movimiento(teclado, o);
     }
 
     private void movimiento(Scanner teclado, char caracter) {
-        System.out.println("¿En qué columna?");
-        int col = teclado.nextInt() - 1;
+        try {
+            System.out.println("¿En qué columna?");
+            int col = teclado.nextInt() - 1;
 
-        for (int i = SIZE - 1; i >= 0; i--) {
-            if(tablero[i][col]== VACIA){
-                tablero[i][col] = caracter;
-                break;
+            for (int i = SIZE - 1; i >= 0; i--) {
+                if (tablero[i][col] == VACIA) {
+                    tablero[i][col] = caracter;
+                    break;
 
+                }
             }
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Esa posición no existe");
         }
     }
 
+    public char[][] getTablero() {
+        return tablero;
+    }
 
     public void imprimirTablero(Tablero3R tab) {
         for (int i = 0; i < SIZE; i++) {
@@ -61,29 +65,29 @@ public class Tablero3R {
         }
     }
 
-    public boolean heGanado(){
+
+    public boolean heGanado() {
         int contador = 0;
 
         if (comprobacionFilas(contador, x)) return true;
         if (comprobacionFilas(contador, o)) return true;
         if (comprobacionColumnas(contador, x)) return true;
-        if (comprobacionColumnas(contador, o)) return true;
-
-        return false;
+        return comprobacionColumnas(contador, o);
     }
 
     private boolean comprobacionFilas(int contador, char caracter) {
         for (int i = 0; i < SIZE; i++) {
             for (int j = 0; j < SIZE; j++) {
-                if(tablero[j][i] == caracter){
+                if (tablero[i][j] == caracter) {
                     contador++;
-                    if(contador==3){
+                    if (contador == 3) {
                         System.out.printf("¡El jugador %s ha ganado!%n", caracter);
                         return true;
                     }
                 }
 
-            } contador=0;
+            }
+            contador = 0;
         }
         return false;
     }
@@ -91,23 +95,25 @@ public class Tablero3R {
     private boolean comprobacionColumnas(int contador, char caracter) {
         for (int i = 0; i < SIZE; i++) {
             for (int j = 0; j < SIZE; j++) {
-                if(tablero[j][i] == caracter){
+                if (tablero[j][i] == caracter) {
                     contador++;
-                    if(contador==3){
+                    if (contador == 3) {
                         System.out.printf("¡El jugador %s ha ganado!%n", caracter);
                         return true;
                     }
                 }
 
-            } contador=0;
+            }
+            contador = 0;
         }
         return false;
     }
 
-    public boolean tableroAgotado(){
+
+    public boolean tableroAgotado() {
         for (int i = 0; i < SIZE; i++) {
             for (int j = 0; j < SIZE; j++) {
-                if(tablero[i][j] == VACIA){
+                if (tablero[i][j] == VACIA) {
                     return false;
                 }
             }
