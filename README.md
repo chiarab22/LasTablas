@@ -5,8 +5,7 @@ Realizado por: Chiara Boccaletti y Patricia Sanz Escurin
 
 ### UML
 
-![LasTablasUML drawio](https://user-images.githubusercontent.com/98825807/156455070-12895553-132c-4176-9e96-56950a267a16.svg)
-
+![LasTablasUML drawio](https://user-images.githubusercontent.com/98779707/156466799-9c14ed43-e485-4606-992d-ea114c547559.svg)
 
 
 ### Ejercicio 3. Nota media (versión 4):
