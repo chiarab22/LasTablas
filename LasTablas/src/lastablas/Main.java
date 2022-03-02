@@ -45,6 +45,7 @@ public class Main {
                     ejercicio7.imprimirTabla();
                     break;
                 case 8:
+                    ejercicio8.guerraBarcos(teclado);
                     break;
                 case 9:
                     break;
