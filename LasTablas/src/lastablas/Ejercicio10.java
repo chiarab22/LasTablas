@@ -1,12 +1,12 @@
 package lastablas;
 
-import java.util.LinkedHashSet;
+import java.util.HashSet;
 import java.util.Optional;
 import java.util.Scanner;
 
 public class Ejercicio10 extends Empleado{
 
-    protected LinkedHashSet<Empleado> empleados = new LinkedHashSet<>();
+    protected HashSet<Empleado> empleados = new HashSet<>();
 
 
 

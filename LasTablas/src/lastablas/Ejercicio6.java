@@ -14,9 +14,9 @@ public class Ejercicio6 {
             switch (option) {
                 case 1:
                     int val = 1;
-                    for (int j = 0; j < TAMAÑO; j++) {
-                        for (int i = 0; i < TAMAÑO; i++) {
-                            tab2d[j][i] = val;
+                    for (int i = 0; i < TAMAÑO; i++) {
+                        for (int j = 0; j < TAMAÑO; j++) {
+                            tab2d[i][j] = val;
                             val++;
                             System.out.print(tab2d[j][i] + " ");
                         }

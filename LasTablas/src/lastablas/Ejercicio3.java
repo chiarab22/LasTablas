@@ -16,13 +16,12 @@ public class Ejercicio3 {
             }else{
                 int suma  = 0;
                 for (int i = 0; i < notas.size(); i++) {
-                     suma  +=  notas.get(i);
+                    suma  +=  notas.get(i);
                 }
 
                 double media = suma/notas.size();
                 System.out.println("La media de las notas "+ notas + " es: " + media);
                 notas.clear();
-                break;
             }
 
         }while(nota != -1);
