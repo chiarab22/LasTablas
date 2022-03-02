@@ -1,6 +1,5 @@
 package lastablas;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ejercicio6 {
