@@ -15,22 +15,32 @@ public class Ejercicio4 {
             menuVotacion();
             opcion = teclado.nextInt();
             switch (opcion) {
-                case 1 -> votos[0]++;
-                case 2 -> votos[1]++;
-                case 3 -> votos[2]++;
-                case 4 -> votos[3]++;
-                default -> System.out.println("La opción elegida no existe. ");
+                case 1:
+                    votos[0]++;
+                    break;
+                case 2:
+                    votos[1]++;
+                    break;
+                case 3:
+                    votos[2]++;
+                    break;
+                case 4:
+                    votos[3]++;
+                    break;
+                default:
+                    System.out.println("La opción elegida no existe. ");
+                    break;
             }
             System.out.println("ha votado");
-        }while(opcion !=68753421);
-        for (int voto:votos) {
-            sumaTotal+=voto;
+        } while (opcion != 68753421);
+        for (int voto : votos) {
+            sumaTotal += voto;
         }
         System.out.println("Resultados: ");
-        System.out.println("Emilia TERREROS: " + Math.round(votos[0]/sumaTotal*100*100.0)/100.0 + " %");
-        System.out.println("Gerardo ESCODAR: " + Math.round(votos[1]/sumaTotal*100*100.0)/100.0 + " %");
-        System.out.println("María AGUAVIVA: " + Math.round(votos[2]/sumaTotal*100*100.0)/100.0 + " %");
-        System.out.println("Nadia LETUX: " + Math.round(votos[3]/sumaTotal*100*100.0)/100.0 + " %");
+        System.out.println("Emilia TERREROS: " + Math.round(votos[0] / sumaTotal * 100 * 100.0) / 100.0 + " %");
+        System.out.println("Gerardo ESCODAR: " + Math.round(votos[1] / sumaTotal * 100 * 100.0) / 100.0 + " %");
+        System.out.println("María AGUAVIVA: " + Math.round(votos[2] / sumaTotal * 100 * 100.0) / 100.0 + " %");
+        System.out.println("Nadia LETUX: " + Math.round(votos[3] / sumaTotal * 100 * 100.0) / 100.0 + " %");
     }
 
     private void menuVotacion() {
