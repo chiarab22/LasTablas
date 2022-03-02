@@ -12,12 +12,26 @@ public class Ejercicio8 extends Tablero{
         juegoBarco = generarTablero();
 
         do{
-            juegoBarco = juegoBarco.movimiento(teclado);
+            juegoBarco = movimiento(juegoBarco, teclado);
             imprimirTablero(juegoBarco);
-            System.out.println(juegoBarco.getColGanadora() + " " + getFilaGanadora());
+  
         }while(!juegoBarco.heGanado());
         System.out.println("Felicidades, ¡has ganado!");
 
+
+    }
+    public static Tablero movimiento(Tablero tablero, Scanner teclado) {
+        System.out.println("¿Qué columna? ");
+        int col = teclado.nextInt() - 1;
+        System.out.println("¿Qué fila? ");
+        int fila = teclado.nextInt() - 1;
+
+        if (col == tablero.colGanadora && fila == tablero.filaGanadora) {
+            tablero.setWin(true);
+        } else {
+            tablero.modificarTablero(fila, col);
+        }
+        return tablero;
 
     }
 }

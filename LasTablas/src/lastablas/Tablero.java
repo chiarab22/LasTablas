@@ -5,17 +5,17 @@ import java.util.Scanner;
 
 public class Tablero {
     private final int SIZE = 4;
-    char[][] tablero = new char[SIZE][SIZE];
+    protected char[][] tablero = new char[SIZE][SIZE];
 
     final char desconocido = '?';
-    final char agua = '~';
+    protected final char agua = '~';
 
     Random r = new Random();
 
     int filaGanadora;
     int colGanadora;
 
-    boolean win;
+    protected boolean win;
 
     public Tablero(char[][] tablero) {
         this.tablero = tablero;
@@ -36,6 +36,14 @@ public class Tablero {
         return colGanadora;
     }
 
+    public void setTablero(char[][] tablero) {
+        this.tablero = tablero;
+    }
+
+    public void setWin(boolean win) {
+        this.win = win;
+}
+
     public Tablero generarTablero() {
         filaGanadora = (r.nextInt(4));
         colGanadora = (r.nextInt(4));
@@ -47,6 +55,18 @@ public class Tablero {
         return new Tablero(tablero);
     }
 
+    public void modificarTablero(int fila, int col){
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
+                if(fila==i&&col==j){
+                    tablero[i][j] = agua;
+                }
+            }
+
+        }
+    }
+
+    /*
     public Tablero movimiento(Scanner teclado) {
         System.out.println("¿Qué columna? ");
         int col = teclado.nextInt() -1;
@@ -61,6 +81,8 @@ public class Tablero {
         return new Tablero(tablero);
 
     }
+
+     */
 
     public void imprimirTablero(Tablero tab) {
         for (int i = 0; i < SIZE; i++) {
