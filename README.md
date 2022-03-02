@@ -6,8 +6,7 @@ Realizado por: Chiara Boccaletti y Patricia Sanz Escurin
 ### Ejercicio 3. Nota media (versión 4):
 El diagrama de flujo correspondiente al ejercicio "Nota media (versión 4)" es:
 
-![Ejercicio3 drawio](https://user-images.githubusercontent.com/98779707/156349065-6ba72fb3-3ea3-47cf-bd1d-4ec30ca9493d.svg)
-
+![Ejercicio3 drawio (1)](https://user-images.githubusercontent.com/98779707/156350009-c94ac1b8-905e-4600-9ad0-0752998dfbe9.svg)
 
 ### Ejercicio 6. ¿Qué hace?:
 1. ¿Qué contiene la tabla generada por el algoritmo siguiente?
