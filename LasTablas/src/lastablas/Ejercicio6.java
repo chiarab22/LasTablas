@@ -1,5 +1,6 @@
 package lastablas;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ejercicio6 {
@@ -11,15 +12,31 @@ public class Ejercicio6 {
         do {
             menuQueHace();
             option = teclado.nextInt();
+            teclado.nextLine();
             switch (option) {
                 case 1:
-                    int val = 1;
+                    int val =1;
+
                     for (int i = 0; i < TAMAÑO; i++) {
                         for (int j = 0; j < TAMAÑO; j++) {
-                            tab2d[i][j] = val;
+                            tab2d[j][i] = val;
                             val++;
-                            System.out.print(tab2d[j][i] + " ");
                         }
+                    }
+                    val = 1;
+
+                    /*
+                    AVISO: He tenido que repetir el rellenar array porque al ejecutarlo por primera vez varios valores no se estaban mostrando correctamente,
+                    sin embargo con el resto de ejecuciones sí.
+                    La única forma que he conseguido para mostrar los valores correctos desde el primer momento es repetir la secuencia.
+                     */
+                    for (int i = 0; i < TAMAÑO; i++) {
+                        for (int j = 0; j < TAMAÑO; j++) {
+                            tab2d[j][i] = val;
+                            System.out.print(tab2d[i][j] + " ");
+                            val++;
+                        }
+
                         System.out.println();
                     }
                     break;

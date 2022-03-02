@@ -14,7 +14,7 @@ public class Ejercicio8 extends Tablero{
         do{
             juegoBarco = movimiento(juegoBarco, teclado);
             imprimirTablero(juegoBarco);
-           
+
         }while(!juegoBarco.heGanado());
         System.out.println("Felicidades, ¡has ganado!");
 
