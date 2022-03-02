@@ -5,8 +5,6 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class Ejercicio10 {
-    Scanner teclado = new Scanner(System.in);
-    private int opcion  = 0;
     protected String nombre;
     protected int nEmpleado, nSeguridadSocial;
     protected HashSet<Ejercicio10> empleados = new HashSet<>();
@@ -45,6 +43,7 @@ public class Ejercicio10 {
     }
     
     public void informacion(Scanner teclado){
+        int opcion = 0;
         do {
             System.out.println("¿Qué quieres hacer?");
             menu();
@@ -107,7 +106,7 @@ public class Ejercicio10 {
          System.out.println("Dime el nombre del empleado:");
          String nombre = teclado.nextLine();
                  if(empleados.contains(nombre)){
-                    System.out.println(empleados.toString());
+                    System.out.println(empleados);
              }
              break;
              case 2 :

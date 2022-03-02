@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Ejercicio3 {
-    Scanner teclado = new Scanner(System.in);
     protected ArrayList<Integer> notas = new ArrayList<>();
     protected int terminar = 0;
 

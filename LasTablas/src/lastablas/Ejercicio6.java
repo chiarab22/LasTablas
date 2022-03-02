@@ -4,17 +4,16 @@ import java.util.Scanner;
 
 public class Ejercicio6 {
     private final int TAMAÑO = 4;
-    private int i, j, val, filas;
     int[][] tab2d = new int[TAMAÑO][TAMAÑO];
-    private int option;
 
     public void queHace(Scanner teclado) {
+        int option;
         do {
             menuQueHace();
             option = teclado.nextInt();
             switch (option) {
                 case 1:
-                    val = 1;
+                    int val = 1;
                     for (int j = 0; j < TAMAÑO; j++) {
                         for (int i = 0; i < TAMAÑO; i++) {
                             tab2d[j][i] = val;
