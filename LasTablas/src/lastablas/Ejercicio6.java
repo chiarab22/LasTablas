@@ -10,7 +10,11 @@ public class Ejercicio6 {
         for (int j = 0; j < TAMAÑO; j++) {
             for (int i = 0; i < TAMAÑO; i++) {
               tab2d[j][i] = val;
+              val++;
+              System.out.print(tab2d[j][i]);
             }
+            System.out.println();
         }
+
     }
 }
