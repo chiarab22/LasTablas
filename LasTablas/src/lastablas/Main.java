@@ -37,7 +37,7 @@ public class Main {
                      ejercicio5.imprimirPalindromo();
                     break;
                 case 6:
-                    ejercicio6.queHace();
+                    ejercicio6.queHace(teclado);
                     break;
                 case 7:
                     ejercicio7.imprimirTabla();
