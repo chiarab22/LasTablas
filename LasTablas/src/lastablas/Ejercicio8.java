@@ -2,8 +2,8 @@ package lastablas;
 
 import java.util.Scanner;
 
-public class Ejercicio8 extends Tablero{
-    Tablero juegoBarco = generarTablero();
+public class Ejercicio8 extends TableroBarcos {
+    TableroBarcos juegoBarco = generarTablero();
 
 
 
@@ -20,7 +20,7 @@ public class Ejercicio8 extends Tablero{
 
 
     }
-    public static Tablero movimiento(Tablero tablero, Scanner teclado) {
+    public static TableroBarcos movimiento(TableroBarcos tablero, Scanner teclado) {
         teclado.nextLine();
         System.out.println("¿Qué columna? ");
         int col = teclado.nextInt() - 1;
