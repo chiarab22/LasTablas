@@ -5,12 +5,12 @@ import java.util.Scanner;
 
 public class Ejercicio3 {
     protected ArrayList<Integer> notas = new ArrayList<>();
-    protected int terminar = 0;
+    int nota = 0;
 
     public void notaMedia4(Scanner teclado){
         do{
             System.out.println("¿Nota?");
-            int nota = teclado.nextInt();
+            nota = teclado.nextInt();
             if(nota >= 0){
                 notas.add(nota);
             }else{
@@ -25,6 +25,6 @@ public class Ejercicio3 {
                 break;
             }
 
-        }while(terminar != -1);
+        }while(nota != -1);
     }
 }
