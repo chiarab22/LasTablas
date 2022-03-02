@@ -3,6 +3,12 @@ Repositorio de la entrega 5: https://github.com/chiarab22/LasTablas.git
 
 Realizado por: Chiara Boccaletti y Patricia Sanz Escurin
 
+### UML
+
+![LasTablasUML drawio](https://user-images.githubusercontent.com/98825807/156455070-12895553-132c-4176-9e96-56950a267a16.svg)
+
+
+
 ### Ejercicio 3. Nota media (versión 4):
 El diagrama de flujo correspondiente al ejercicio "Nota media (versión 4)" es:
 
