@@ -9,8 +9,13 @@ public class Ejercicio9 extends Tablero3R{
     public void tresEnRaya(Scanner teclado){
         generarTablero();
 
-        movimientox(teclado);
-        imprimirTablero(juego3R);
-        movimientoo(teclado);
+        do {
+            System.out.println("Turno del jugador X");
+            juego3R.movimientox(teclado);
+            imprimirTablero(juego3R);
+            System.out.println("Turno del jugador O");
+            juego3R.movimientoo(teclado);
+            imprimirTablero(juego3R);
+        }while (!juego3R.heGanado()||juego3R.tableroAgotado());
     }
 }

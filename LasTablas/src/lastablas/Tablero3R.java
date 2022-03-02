@@ -30,36 +30,26 @@ public class Tablero3R {
         return tablero;
     }
 
-    public void setTablero(char[][] tablero) {
-        this.tablero = tablero;
-    }
-
     public void movimientox(Scanner teclado){
-        System.out.println("¿En qué columna?");
-        int col = teclado.nextInt() - 1;
-
-        for (int i = 0; i < SIZE; i++) {
-                if(tablero[i][col]== VACIA){
-                    tablero[i][col] = x;
-                    break;
-
-            }
-        }
+        movimiento(teclado, x);
     }
 
     public void movimientoo(Scanner teclado){
+        movimiento(teclado, o);
+    }
+
+    private void movimiento(Scanner teclado, char caracter) {
         System.out.println("¿En qué columna?");
         int col = teclado.nextInt() - 1;
 
-        for (int i = 0; i < SIZE; i++) {
+        for (int i = SIZE - 1; i >= 0; i--) {
             if(tablero[i][col]== VACIA){
-                tablero[i][col] = o;
+                tablero[i][col] = caracter;
                 break;
 
             }
         }
     }
-
 
 
     public void imprimirTablero(Tablero3R tab) {
@@ -69,6 +59,46 @@ public class Tablero3R {
             }
             System.out.println();
         }
+    }
+
+    public boolean heGanado(){
+        int contador = 0;
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
+                if(tablero[i][j] == x){
+                    contador++;
+                    if(contador==3){
+                        System.out.println("¡El jugado X ha ganado!");
+                        return true;
+                    }
+                }
+
+            } contador=0;
+        }
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
+                if(tablero[i][j] == 0){
+                    contador++;
+                    if(contador==3){
+                        System.out.println("¡El jugado O ha ganado!");
+                        return true;
+                    }
+                }
+
+            } contador=0;
+        }
+        return false;
+    }
+
+    public boolean tableroAgotado(){
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
+                if(tablero[i][j] == VACIA){
+                    return false;
+                }
+            }
+
+        }return true;
     }
 
 }
