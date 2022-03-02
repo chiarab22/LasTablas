@@ -16,6 +16,6 @@ public class Ejercicio9 extends Tablero3R{
             System.out.println("Turno del jugador O");
             juego3R.movimientoo(teclado);
             imprimirTablero(juego3R);
-        }while (!juego3R.heGanado()||juego3R.tableroAgotado());
+        }while (!juego3R.heGanado()&&!juego3R.tableroAgotado());
     }
 }

@@ -63,24 +63,38 @@ public class Tablero3R {
 
     public boolean heGanado(){
         int contador = 0;
+
+        if (comprobacionFilas(contador, x)) return true;
+        if (comprobacionFilas(contador, o)) return true;
+        if (comprobacionColumnas(contador, x)) return true;
+        if (comprobacionColumnas(contador, o)) return true;
+
+        return false;
+    }
+
+    private boolean comprobacionFilas(int contador, char caracter) {
         for (int i = 0; i < SIZE; i++) {
             for (int j = 0; j < SIZE; j++) {
-                if(tablero[i][j] == x){
+                if(tablero[j][i] == caracter){
                     contador++;
                     if(contador==3){
-                        System.out.println("¡El jugado X ha ganado!");
+                        System.out.printf("¡El jugador %s ha ganado!%n", caracter);
                         return true;
                     }
                 }
 
             } contador=0;
         }
+        return false;
+    }
+
+    private boolean comprobacionColumnas(int contador, char caracter) {
         for (int i = 0; i < SIZE; i++) {
             for (int j = 0; j < SIZE; j++) {
-                if(tablero[i][j] == 0){
+                if(tablero[j][i] == caracter){
                     contador++;
                     if(contador==3){
-                        System.out.println("¡El jugado O ha ganado!");
+                        System.out.printf("¡El jugador %s ha ganado!%n", caracter);
                         return true;
                     }
                 }
@@ -98,7 +112,9 @@ public class Tablero3R {
                 }
             }
 
-        }return true;
+        }
+        System.out.println("¡Empate!");
+        return true;
     }
 
 }
