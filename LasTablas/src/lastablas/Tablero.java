@@ -1,7 +1,6 @@
 package lastablas;
 
 import java.util.Random;
-import java.util.Scanner;
 
 public class Tablero {
     private final int SIZE = 4;
@@ -12,13 +11,15 @@ public class Tablero {
 
     Random r = new Random();
 
-    int filaGanadora;
-    int colGanadora;
+    private int filaGanadora;
+    private int colGanadora;
 
     protected boolean win;
 
-    public Tablero(char[][] tablero) {
+    public Tablero(char[][] tablero, int filaGanadora, int colGanadora) {
         this.tablero = tablero;
+        this.filaGanadora = filaGanadora;
+        this.colGanadora = colGanadora;
     }
 
     public Tablero() {
@@ -45,14 +46,14 @@ public class Tablero {
 }
 
     public Tablero generarTablero() {
-        filaGanadora = (r.nextInt(4));
-        colGanadora = (r.nextInt(4));
+        filaGanadora = (int)(Math.random()*4);
+        colGanadora = (int)(Math.random()*4);
         for (int i = 0; i < SIZE; i++) {
             for (int j = 0; j < SIZE; j++) {
                 tablero[i][j] = desconocido;
             }
         }
-        return new Tablero(tablero);
+        return new Tablero(tablero, filaGanadora, colGanadora);
     }
 
     public void modificarTablero(int fila, int col){
@@ -66,23 +67,6 @@ public class Tablero {
         }
     }
 
-    /*
-    public Tablero movimiento(Scanner teclado) {
-        System.out.println("¿Qué columna? ");
-        int col = teclado.nextInt() -1;
-        System.out.println("¿Qué fila? ");
-        int fila = teclado.nextInt() -1;
-
-        if (col == this.colGanadora && fila == this.filaGanadora) {
-            this.win = true;
-        } else {
-            tablero[fila][col] = agua;
-        }
-        return new Tablero(tablero);
-
-    }
-
-     */
 
     public void imprimirTablero(Tablero tab) {
         for (int i = 0; i < SIZE; i++) {
@@ -94,6 +78,6 @@ public class Tablero {
     }
 
     public boolean heGanado() {
-        return this.win;
+        return win;
     }
 }

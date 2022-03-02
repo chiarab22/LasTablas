@@ -14,19 +14,20 @@ public class Ejercicio8 extends Tablero{
         do{
             juegoBarco = movimiento(juegoBarco, teclado);
             imprimirTablero(juegoBarco);
-  
+           
         }while(!juegoBarco.heGanado());
         System.out.println("Felicidades, ¡has ganado!");
 
 
     }
     public static Tablero movimiento(Tablero tablero, Scanner teclado) {
+        teclado.nextLine();
         System.out.println("¿Qué columna? ");
         int col = teclado.nextInt() - 1;
         System.out.println("¿Qué fila? ");
         int fila = teclado.nextInt() - 1;
 
-        if (col == tablero.colGanadora && fila == tablero.filaGanadora) {
+        if (col == tablero.getColGanadora() && fila == tablero.getFilaGanadora()) {
             tablero.setWin(true);
         } else {
             tablero.modificarTablero(fila, col);
