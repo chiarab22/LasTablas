@@ -62,33 +62,34 @@ public class Tablero3R {
     }
 
     public boolean heGanado() {
-        int contador = 0;
-
-        if (comprobacionFilasCol(contador, x)) return true;
-        if (comprobacionFilasCol(contador, o)) return true;
+        if (comprobacionFilasCol(x)) return true;
+        if (comprobacionFilasCol(o)) return true;
         if (comprobacionDiagonales(x)) return true;
         return comprobacionDiagonales(o);
     }
 
-    private boolean comprobacionFilasCol(int contador, char caracter) {
+    private boolean comprobacionFilasCol(char caracter) {
+        int contadorfilas = 0;
+        int contadorcolumnas = 0;
         for (int i = 0; i < SIZE; i++) {
             for (int j = 0; j < SIZE; j++) {
                 if (tablero[i][j] == caracter) {
-                    contador++;
-                    if (contador == 3) {
-                        System.out.printf("¡El jugador %s ha ganado!%n", caracter);
+                    contadorfilas++;
+                    if (contadorfilas == 3) {
+                        System.out.printf("¡El jugador %s ha ganado!%n" , caracter);
                         return true;
                     }
-                } else if (tablero[j][i] == caracter) {
-                    contador++;
-                    if (contador == 3) {
+                } if (tablero[j][i] == caracter) {
+                    contadorcolumnas++;
+                    if (contadorcolumnas == 3) {
                         System.out.printf("¡El jugador %s ha ganado!%n", caracter);
                         return true;
                     }
                 }
 
             }
-            contador = 0;
+            contadorfilas = 0;
+            contadorcolumnas = 0;
         }
         return false;
     }
