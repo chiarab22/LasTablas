@@ -29,6 +29,7 @@ public class Ejercicio10 extends Empleado {
                 }
             } catch (InputMismatchException e) {
                 System.out.println("El caracter introducido no es correcto.");
+                teclado.nextLine();
             }
         } while (opcion != 3);
     }

@@ -36,6 +36,7 @@ public class Ejercicio4 {
                 System.out.println("ha votado");
             } catch (InputMismatchException e) {
                 System.out.println("El caracter introducido no es correcto.");
+                teclado.nextLine();
             }
         } while (opcion != 68753421);
         for (int voto : votos) {

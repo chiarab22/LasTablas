@@ -56,17 +56,21 @@ public class Main {
                     case 10:
                         ejercicio10.informacion(teclado);
                         break;
+                    default:
+                        System.out.println("La opción elegida no existe. ");
 
 
                 }
             } catch (InputMismatchException e) {
-                System.out.println("El caracter introducido no es correcto. ");
+                System.out.println("");
+                teclado.nextLine();
             }
-
-
         } while (option != 11);
         System.out.println("¡Muchas gracias!");
     }
+
+
+
 
     private static void menu() {
 

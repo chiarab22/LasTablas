@@ -54,10 +54,13 @@ public class Ejercicio6 {
                             System.out.println();
                         }
                         break;
+                    default:
+                        System.out.println("La opción elegida no existe. ");
 
                 }
             } catch (InputMismatchException e) {
                 System.out.println("El caracter introducido no es correcto. ");
+                teclado.nextLine();
             }
         } while (option != 3);
 

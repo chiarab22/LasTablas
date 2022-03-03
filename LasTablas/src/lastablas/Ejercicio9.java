@@ -21,6 +21,7 @@ public class Ejercicio9 extends Tablero3R {
                 imprimirTablero(juego3R);
             } catch (InputMismatchException e) {
                 System.out.println("El caracter introducido no es correcto. ");
+                teclado.nextLine();
             }
         } while (!juego3R.heGanado() && !juego3R.tableroAgotado());
     }
