@@ -14,7 +14,7 @@ public class Ejercicio3 {
             if (nota >= 0) {
                 notas.add(nota);
             } else {
-                int suma = 0;
+                double suma = 0;
                 for (Integer integer : notas) {
                     suma += integer;
                 }

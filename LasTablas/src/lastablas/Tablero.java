@@ -51,7 +51,7 @@ public class Tablero {
             for (int j = 0; j < SIZE; j++) {
                 if (fila == i && col == j) {
                     tablero[i][j] = agua;
-                    System.out.println("¡Agua!");
+                    System.out.println("¡Agua!\n");
                 }
             }
 
