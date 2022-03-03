@@ -14,8 +14,6 @@ public class Ejercicio5 {
         char[] valores = palindromo.toCharArray();
 
 
-        System.out.println(valores);
-
         for (int inicio = 0, fin = palindromo.length() - 2; inicio <= fin; inicio++, fin--) {
             if (valores[inicio] != valores[fin]) {
                 return false;

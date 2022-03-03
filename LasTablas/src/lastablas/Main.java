@@ -1,11 +1,12 @@
 package lastablas;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        int option;
+        int option = 0;
         Ejercicio1 ejercicio1 = new Ejercicio1();
         Ejercicio2 ejercicio2 = new Ejercicio2();
         Ejercicio3 ejercicio3 = new Ejercicio3();
@@ -19,44 +20,49 @@ public class Main {
 
 
         do {
-            System.out.println("\n***************************");
-            System.out.println("Elija una de las opciones: ");
-            menu();
-            option = teclado.nextInt();
-            switch (option) {
-                case 1:
-                    ejercicio1.cuentaAtras();
-                    break;
-                case 2:
-                    ejercicio2.numOcurrencias(teclado);
-                    break;
-                case 3:
-                    ejercicio3.notaMedia4(teclado);
-                    break;
-                case 4:
-                    ejercicio4.maquinaVotar(teclado);
-                    break;
-                case 5:
-                    ejercicio5.imprimirPalindromo();
-                    break;
-                case 6:
-                    ejercicio6.queHace(teclado);
-                    break;
-                case 7:
-                    ejercicio7.imprimirTabla();
-                    break;
-                case 8:
-                    ejercicio8.guerraBarcos(teclado);
-                    break;
-                case 9:
-                    ejercicio9.tresEnRaya(teclado);
-                    break;
-                case 10:
-                    ejercicio10.informacion(teclado);
-                    break;
+            try {
+                System.out.println("\n***************************");
+                System.out.println("Elija una de las opciones: ");
+                menu();
+                option = teclado.nextInt();
+                switch (option) {
+                    case 1:
+                        ejercicio1.cuentaAtras();
+                        break;
+                    case 2:
+                        ejercicio2.numOcurrencias(teclado);
+                        break;
+                    case 3:
+                        ejercicio3.notaMedia4(teclado);
+                        break;
+                    case 4:
+                        ejercicio4.maquinaVotar(teclado);
+                        break;
+                    case 5:
+                        ejercicio5.imprimirPalindromo();
+                        break;
+                    case 6:
+                        ejercicio6.queHace(teclado);
+                        break;
+                    case 7:
+                        ejercicio7.imprimirTabla();
+                        break;
+                    case 8:
+                        ejercicio8.guerraBarcos(teclado);
+                        break;
+                    case 9:
+                        ejercicio9.tresEnRaya(teclado);
+                        break;
+                    case 10:
+                        ejercicio10.informacion(teclado);
+                        break;
 
 
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("El caracter introducido no es correcto. ");
             }
+
 
         } while (option != 11);
         System.out.println("¡Muchas gracias!");

@@ -1,6 +1,7 @@
 package lastablas;
 
 import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejercicio4 {
@@ -9,29 +10,33 @@ public class Ejercicio4 {
 
     public void maquinaVotar(Scanner teclado) {
         Arrays.fill(votos, 0);
-        int opcion;
+        int opcion = 0;
         do {
-            System.out.println("Elija entre: ");
-            menuVotacion();
-            opcion = teclado.nextInt();
-            switch (opcion) {
-                case 1:
-                    votos[0]++;
-                    break;
-                case 2:
-                    votos[1]++;
-                    break;
-                case 3:
-                    votos[2]++;
-                    break;
-                case 4:
-                    votos[3]++;
-                    break;
-                default:
-                    System.out.println("La opción elegida no existe. ");
-                    break;
+            try {
+                System.out.println("Elija entre: ");
+                menuVotacion();
+                opcion = teclado.nextInt();
+                switch (opcion) {
+                    case 1:
+                        votos[0]++;
+                        break;
+                    case 2:
+                        votos[1]++;
+                        break;
+                    case 3:
+                        votos[2]++;
+                        break;
+                    case 4:
+                        votos[3]++;
+                        break;
+                    default:
+                        System.out.println("La opción elegida no existe. ");
+                        break;
+                }
+                System.out.println("ha votado");
+            } catch (InputMismatchException e) {
+                System.out.println("El caracter introducido no es correcto.");
             }
-            System.out.println("ha votado");
         } while (opcion != 68753421);
         for (int voto : votos) {
             sumaTotal += voto;

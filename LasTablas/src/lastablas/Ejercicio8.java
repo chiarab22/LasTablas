@@ -15,7 +15,7 @@ public class Ejercicio8 extends Tablero {
             try {
                 movimiento(juegoBarco, teclado);
                 imprimirTablero(juegoBarco);
-            }catch (InputMismatchException e){
+            } catch (InputMismatchException e) {
                 System.out.println("El caracter introducido no es correcto");
             }
 
@@ -28,18 +28,17 @@ public class Ejercicio8 extends Tablero {
     public static void movimiento(Tablero tablero, Scanner teclado) {
         teclado.nextLine();
 
-            System.out.println("¿Qué columna? ");
-            int col = teclado.nextInt() - 1;
-            System.out.println("¿Qué fila? ");
-            int fila = teclado.nextInt() - 1;
+        System.out.println("¿Qué columna? ");
+        int col = teclado.nextInt() - 1;
+        System.out.println("¿Qué fila? ");
+        int fila = teclado.nextInt() - 1;
 
 
-            if (col == tablero.getColGanadora() && fila == tablero.getFilaGanadora()) {
-                tablero.setWin(true);
-            } else {
-                tablero.modificarTablero(fila, col);
-            }
-
+        if (col == tablero.getColGanadora() && fila == tablero.getFilaGanadora()) {
+            tablero.setWin(true);
+        } else {
+            tablero.modificarTablero(fila, col);
+        }
 
 
     }

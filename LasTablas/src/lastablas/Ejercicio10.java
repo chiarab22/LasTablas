@@ -1,37 +1,37 @@
 package lastablas;
 
+import java.util.InputMismatchException;
 import java.util.LinkedHashSet;
 import java.util.Optional;
 import java.util.Scanner;
 
-public class Ejercicio10 extends Empleado{
+public class Ejercicio10 extends Empleado {
 
     protected LinkedHashSet<Empleado> empleados = new LinkedHashSet<>();
 
 
-
-
     public void informacion(Scanner teclado) {
-        int opcion;
+        int opcion = 0;
         do {
-            System.out.println("¿Qué quieres hacer?");
-            menu();
-            opcion = teclado.nextInt();
-            switch (opcion) {
-                case 1:
-                    añadirEmpleado(teclado);
-                    break;
-                case 2:
-                    buscarEmpleado(teclado);
+            try {
+                System.out.println("¿Qué quieres hacer?");
+                menu();
+                opcion = teclado.nextInt();
+                switch (opcion) {
+                    case 1:
+                        añadirEmpleado(teclado);
+                        break;
+                    case 2:
+                        buscarEmpleado(teclado);
 
-                default:
-                    break;
+                    default:
+                        break;
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("El caracter introducido no es correcto.");
             }
-
-
         } while (opcion != 3);
     }
-
 
 
     public void añadirEmpleado(Scanner teclado) {
@@ -60,7 +60,7 @@ public class Ejercicio10 extends Empleado{
                 if (empleadoNombre.isPresent()) {
                     Empleado empMostrar = empleadoNombre.get();
                     imprimirEmpleado(empMostrar);
-                }else{
+                } else {
                     System.out.println("No existe ningún empleado con el nombre indicado. ");
                 }
                 break;
@@ -68,11 +68,11 @@ public class Ejercicio10 extends Empleado{
 
                 System.out.println("Dime el número del empleado:");
                 int nEmpleado = teclado.nextInt();
-                Optional<Empleado> empleadoNE = empleados.stream().filter(e -> e.getnEmpleado()==(nEmpleado)).findFirst();
+                Optional<Empleado> empleadoNE = empleados.stream().filter(e -> e.getnEmpleado() == (nEmpleado)).findFirst();
                 if (empleadoNE.isPresent()) {
                     Empleado empMostrar = empleadoNE.get();
                     imprimirEmpleado(empMostrar);
-                }else{
+                } else {
                     System.out.println("No existe ningún empleado con el número de empleado indicado. ");
                 }
                 break;
@@ -80,11 +80,11 @@ public class Ejercicio10 extends Empleado{
 
                 System.out.println("Dime el número de la seguridad social del empleado:");
                 int nSegSocial = teclado.nextInt();
-                Optional<Empleado> empleadoNSS = empleados.stream().filter(e -> e.getnSeguridadSocial()==(nSegSocial)).findFirst();
+                Optional<Empleado> empleadoNSS = empleados.stream().filter(e -> e.getnSeguridadSocial() == (nSegSocial)).findFirst();
                 if (empleadoNSS.isPresent()) {
                     Empleado empMostrar = empleadoNSS.get();
                     imprimirEmpleado(empMostrar);
-                }else{
+                } else {
                     System.out.println("No existe ningún empleado con el número de seguridad social indicado. ");
                 }
                 break;
@@ -94,7 +94,7 @@ public class Ejercicio10 extends Empleado{
     }
 
     private void imprimirEmpleado(Empleado empleado) {
-        System.out.printf("Nombre: %s - Número: %d - SS: %d%n", empleado.getNombre(),  empleado.getnEmpleado(), empleado.getnSeguridadSocial());
+        System.out.printf("Nombre: %s - Número: %d - SS: %d%n", empleado.getNombre(), empleado.getnEmpleado(), empleado.getnSeguridadSocial());
     }
 
     private static void menu() {

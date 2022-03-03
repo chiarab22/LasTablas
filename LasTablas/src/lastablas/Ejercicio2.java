@@ -18,8 +18,8 @@ public class Ejercicio2 {
         } while (valor1 != -1);
 
         for (int i = 0; i < contador.length; i++) {
-            for (int valor:listaNum) {
-                if(valor == i){
+            for (int valor : listaNum) {
+                if (valor == i) {
                     contador[i]++;
                 }
             }

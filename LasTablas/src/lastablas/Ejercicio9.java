@@ -1,5 +1,6 @@
 package lastablas;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejercicio9 extends Tablero3R {
@@ -10,13 +11,17 @@ public class Ejercicio9 extends Tablero3R {
         generarTablero();
 
         do {
-            System.out.println("Turno del jugador X");
-            juego3R.movimientox(teclado);
-            imprimirTablero(juego3R);
+            try {
+                System.out.println("Turno del jugador X");
+                juego3R.movimientox(teclado);
+                imprimirTablero(juego3R);
 
-            System.out.println("Turno del jugador O");
-            juego3R.movimientoo(teclado);
-            imprimirTablero(juego3R);
+                System.out.println("Turno del jugador O");
+                juego3R.movimientoo(teclado);
+                imprimirTablero(juego3R);
+            } catch (InputMismatchException e) {
+                System.out.println("El caracter introducido no es correcto. ");
+            }
         } while (!juego3R.heGanado() && !juego3R.tableroAgotado());
     }
 }
