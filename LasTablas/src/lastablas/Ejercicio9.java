@@ -9,6 +9,7 @@ public class Ejercicio9 extends Tablero3R {
 
     public void tresEnRaya(Scanner teclado) {
         generarTablero();
+        imprimirTablero(juego3R);
 
         do {
             try {

@@ -20,7 +20,7 @@ public class Ejercicio3 {
                 }
 
                 double media = suma / notas.size();
-                System.out.println("La media de las notas " + notas + " es: " + media);
+                System.out.println("La media de las notas " + notas + " es: " + Math.round(media* 100.0) / 100.0 );
                 notas.clear();
             }
 
