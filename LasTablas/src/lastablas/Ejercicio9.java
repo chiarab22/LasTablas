@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Ejercicio9 extends Tablero3R {
 
-    Tablero3R juego3R = generarTablero();
+    private Tablero3R juego3R = generarTablero();
 
     public void tresEnRaya(Scanner teclado) {
         generarTablero();
@@ -13,6 +13,7 @@ public class Ejercicio9 extends Tablero3R {
             System.out.println("Turno del jugador X");
             juego3R.movimientox(teclado);
             imprimirTablero(juego3R);
+
             System.out.println("Turno del jugador O");
             juego3R.movimientoo(teclado);
             imprimirTablero(juego3R);

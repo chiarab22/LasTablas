@@ -14,7 +14,7 @@ public class Ejercicio6 {
             teclado.nextLine();
             switch (option) {
                 case 1:
-                    int val =1;
+                    int val = 1;
 
                     for (int i = 0; i < TAMAÑO; i++) {
                         for (int j = 0; j < TAMAÑO; j++) {
@@ -48,7 +48,7 @@ public class Ejercicio6 {
                             val++;
                             System.out.print(tab2d[j][i] + " ");
                         }
-                        val = j +1;
+                        val = j + 1;
                         System.out.println();
                     }
                     break;

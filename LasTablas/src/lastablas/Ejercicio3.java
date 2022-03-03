@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Ejercicio3 {
     protected ArrayList<Integer> notas = new ArrayList<>();
-    int nota = 0;
+    private int nota = 0;
 
     public void notaMedia4(Scanner teclado) {
         do {
@@ -15,8 +15,8 @@ public class Ejercicio3 {
                 notas.add(nota);
             } else {
                 int suma = 0;
-                for (int i = 0; i < notas.size(); i++) {
-                    suma += notas.get(i);
+                for (Integer integer : notas) {
+                    suma += integer;
                 }
 
                 double media = suma / notas.size();

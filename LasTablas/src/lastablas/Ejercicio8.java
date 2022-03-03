@@ -3,8 +3,7 @@ package lastablas;
 import java.util.Scanner;
 
 public class Ejercicio8 extends Tablero {
-    Tablero juegoBarco;
-
+    private Tablero juegoBarco;
 
     public void guerraBarcos(Scanner teclado) {
 

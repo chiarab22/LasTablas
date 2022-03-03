@@ -2,14 +2,12 @@ package lastablas;
 
 public class Tablero {
     private final int SIZE = 4;
-    protected char[][] tablero = new char[SIZE][SIZE];
-
-    protected final char desconocido = '?';
-    protected final char agua = '~';
+    private char[][] tablero = new char[SIZE][SIZE];
+    private final char desconocido = '?';
+    private final char agua = '~';
     private int filaGanadora;
     private int colGanadora;
-
-    protected boolean win;
+    private boolean win;
 
     public Tablero(char[][] tablero, int filaGanadora, int colGanadora) {
         this.tablero = tablero;
@@ -34,11 +32,11 @@ public class Tablero {
 
     public void setWin(boolean win) {
         this.win = win;
-}
+    }
 
     public Tablero generarTablero() {
-        filaGanadora = (int)(Math.random()*4);
-        colGanadora = (int)(Math.random()*4);
+        filaGanadora = (int) (Math.random() * 4);
+        colGanadora = (int) (Math.random() * 4);
         for (int i = 0; i < SIZE; i++) {
             for (int j = 0; j < SIZE; j++) {
                 tablero[i][j] = desconocido;
@@ -48,11 +46,12 @@ public class Tablero {
     }
 
 
-    public void modificarTablero(int fila, int col){
+    public void modificarTablero(int fila, int col) {
         for (int i = 0; i < SIZE; i++) {
             for (int j = 0; j < SIZE; j++) {
-                if(fila==i&&col==j){
+                if (fila == i && col == j) {
                     tablero[i][j] = agua;
+                    System.out.println("¡Agua!");
                 }
             }
 
