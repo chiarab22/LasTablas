@@ -96,10 +96,10 @@ public class Tablero3R {
 
 
     private boolean comprobacionDiagonales(char caracter) {
-        if (tablero[0][0] == tablero[2][2] && tablero[0][0] == tablero[1][1] && tablero[1][1] != VACIA) {
+        if (tablero[0][0] == tablero[2][2] && tablero[0][0] == tablero[1][1] && tablero[1][1] == caracter) {
             System.out.printf("¡El jugador %s ha ganado!%n", caracter);
             return true;
-        } else if ((tablero[0][2] == tablero[1][1] && tablero[0][2] == tablero[2][0] && tablero[1][1] != VACIA)) {
+        } else if ((tablero[0][2] == tablero[1][1] && tablero[0][2] == tablero[2][0] && tablero[1][1] == caracter)) {
             System.out.printf("¡El jugador %s ha ganado!%n", caracter);
             return true;
         }
